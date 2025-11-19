@@ -2,113 +2,115 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Guia Trapper Premium - Wakfu Edition</title>
+<title>Guia Trapper Premium</title>
 
-<!-- Fonte Wakfu-like -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
-/* ======== ESTILO GERAL DO MUNDO WAKFU ======== */
-body {
+/* ======== RESET ======== */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ======== FUNDO CORRIGIDO ======== */
+body {
     font-family: "Montserrat", sans-serif;
     color: #e8fffa;
     background: radial-gradient(circle, #0a1f1f, #000c0c);
     overflow-x: hidden;
 }
 
-/* Fundo animado com partículas */
-@keyframes particles {
-    0% { background-position: 0 0; }
-    100% { background-position: 2000px 2000px; }
-}
 body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background: url('https://i.imgur.com/Y1z4A7M.png');
-    opacity: 0.16;
+    background: url('https://i.imgur.com/HDkYyqU.jpeg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.18;
     animation: particles 120s linear infinite;
-    pointer-events: none;
+    z-index: -1;
 }
 
-/* ======== CABEÇALHO ======== */
-h1 {
+@keyframes particles {
+    0% { background-position: 0 0; }
+    100% { background-position: 2000px 2000px; }
+}
+
+/* ======== TÍTULO ======== */
+.title {
     text-align: center;
+    font-size: 42px;
+    font-weight: 800;
     margin-top: 40px;
-    font-size: 45px;
-    font-weight: 600;
-    color: #9fffe0;
-    text-shadow: 0 0 20px #38ffc3, 0 0 40px #38ffc3;
+    margin-bottom: 25px;
+    text-shadow: 0 0 12px #00f2ff;
 }
 
-/* ======== CONTAINER DA TABELA ======== */
-.container {
+/* ======== CONTAINER ======== */
+.table-box {
     width: 92%;
-    margin: 40px auto;
-    background: rgba(15, 35, 35, 0.65);
-    border: 2px solid #38ffc3;
-    border-radius: 12px;
+    margin: auto;
+    border-radius: 16px;
     padding: 20px;
-    box-shadow: 0 0 25px #1affd5;
+    background: rgba(0, 50, 50, 0.35);
+    border: 2px solid #00ffee9f;
+    box-shadow: 0 0 25px #00ffee77;
+    backdrop-filter: blur(4px);
 }
 
 /* ======== TABELA ======== */
 table {
     width: 100%;
     border-collapse: collapse;
+    text-align: center;
     font-size: 15px;
 }
 
 th {
-    background: rgba(9, 25, 25, 0.9);
+    background: rgba(0, 255, 240, 0.2);
     padding: 12px;
-    color: #9fffe0;
-    border-bottom: 2px solid #38ffc3;
-    text-shadow: 0 0 8px #38ffc3;
+    font-size: 16px;
+    font-weight: 700;
+    text-shadow: 0 0 8px #00ffea;
 }
 
 td {
     padding: 10px;
-    border-bottom: 1px solid rgba(56, 255, 195, 0.25);
-    transition: 0.2s;
+    border-bottom: 1px solid #0ff3;
 }
 
-/* Linhas com cores estilo Wakfu */
-tr:nth-child(odd) { background: rgba(20, 50, 50, 0.6); }
-tr:nth-child(even) { background: rgba(16, 40, 40, 0.6); }
-
-/* Efeito hover */
 tr:hover {
-    background: rgba(56, 255, 195, 0.18);
-    box-shadow: inset 0 0 12px #38ffc3;
-    cursor: pointer;
+    background: rgba(0, 255, 255, 0.08);
 }
 
 /* ======== RODAPÉ ======== */
-footer {
+.footer {
     text-align: center;
-    margin: 40px 0;
-    font-size: 20px;
-    color: #9fffe0;
-    text-shadow: 0 0 12px #38ffc3;
+    margin-top: 40px;
+    font-size: 18px;
+    padding-bottom: 45px;
+    color: #afffff;
+    text-shadow: 0 0 10px #00faff;
 }
-.tag {
-    display: inline-block;
-    padding: 8px 18px;
-    border: 2px solid #38ffc3;
-    background: rgba(9, 25, 25, 0.85);
-    border-radius: 8px;
-    box-shadow: 0 0 20px #38ffc3;
+
+.footer span {
+    background: rgba(0, 255, 230, 0.2);
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: 1px solid #00ffee88;
+    box-shadow: 0 0 15px #00ffee55;
 }
 </style>
-</head>
 
+</head>
 <body>
 
-<h1>Guia Trapper Premium</h1>
+<h1 class="title">Guia Trapper Premium</h1>
 
-<div class="container">
+<div class="table-box">
 <table>
     <tr>
         <th>Faixa de Nível</th>
@@ -120,22 +122,23 @@ footer {
         <th>XP</th>
     </tr>
 
-    <tr><td>001 → 010</td><td>Semente de Papatudo</td><td>50</td><td>Gobballs</td><td>Astrub Fields</td><td>Rotação circular.</td><td>~30 XP</td></tr>
-    <tr><td>010 → 020</td><td>Semente de Tofu</td><td>150</td><td>Tofus</td><td>Amakna</td><td>Priorize cantos.</td><td>~60 XP</td></tr>
-    <tr><td>020 → 030</td><td>Semente de Larva</td><td>250</td><td>Larvas</td><td>Astrub Mines</td><td>Área fechada = rápido.</td><td>~100 XP</td></tr>
-    <tr><td>030 → 040</td><td>Semente de Blibli</td><td>350</td><td>Bliblis</td><td>Kara / Brakmar</td><td>Melhor rota em Kara.</td><td>~150 XP</td></tr>
-    <tr><td>040 → 050</td><td>Semente de Prespic</td><td>450</td><td>Prespics</td><td>Mourning Wood</td><td>Escondem atrás de árvores.</td><td>~220 XP</td></tr>
-    <tr><td>050 → 060</td><td>Ovo de Crobak</td><td>550</td><td>Crobaks</td><td>Kelba</td><td>Evite pontes.</td><td>~300 XP</td></tr>
-    <tr><td>060 → 070</td><td>Semente Caranguejo Exótico</td><td>1300</td><td>Exotic Crabs</td><td>Sufokia</td><td>Praia linear.</td><td>~450 XP</td></tr>
-    <tr><td>070 → 080</td><td>Semente de Mulmouth</td><td>1500</td><td>Mulmouths</td><td>Chillberg</td><td>Gigantes, rota rápida.</td><td>~600 XP</td></tr>
-    <tr><td>080 → 090</td><td>Semente de Geleia</td><td>1700</td><td>Jellies</td><td>Bilbiza</td><td>Plante em massa.</td><td>~800 XP</td></tr>
-    <tr><td>090 → 100</td><td>Semente de Sussurro</td><td>1900</td><td>Whispers</td><td>Whisperers</td><td>Cuidado com aggro.</td><td>~1000+ XP</td></tr>
+    <tr><td>001 → 010</td><td>Semente de Papatudo</td><td>50</td><td>Gobbals</td><td>Astrub Fields</td><td>Rotação circular</td><td>~30 XP</td></tr>
+    <tr><td>010 → 020</td><td>Semente de Tofu</td><td>150</td><td>Tofus</td><td>Amakna Prairie</td><td>Evite estradas</td><td>~60 XP</td></tr>
+    <tr><td>020 → 030</td><td>Semente de Larva</td><td>250</td><td>Larvas</td><td>Astrub Mines</td><td>Rápido em área fechada</td><td>~100 XP</td></tr>
+    <tr><td>030 → 040</td><td>Semente de Biblí</td><td>350</td><td>Biblis</td><td>Bonta / Brak</td><td>Área ideal</td><td>~150 XP</td></tr>
+    <tr><td>040 → 050</td><td>Semente de Prespic</td><td>450</td><td>Prespics</td><td>Mourning Wood</td><td>Escondidos atrás das árvores</td><td>~220 XP</td></tr>
+    <tr><td>050 → 060</td><td>Ovo de Crobak</td><td>550</td><td>Crobaks</td><td>Kelba</td><td>Evite pontes</td><td>~300 XP</td></tr>
+    <tr><td>060 → 070</td><td>Semente de Caranguejo Exótico</td><td>1300</td><td>Exotic Crabs</td><td>Sufokia</td><td>Melhor rota: praia linear</td><td>~450 XP</td></tr>
+    <tr><td>070 → 080</td><td>Semente de Mulmouth</td><td>1500</td><td>Mulmouths</td><td>Chillberg</td><td>Gigantes, rota fácil</td><td>~600 XP</td></tr>
+    <tr><td>080 → 090</td><td>Semente de Geleia</td><td>1700</td><td>Jellies</td><td>Bilibiza</td><td>Plante em massa</td><td>~800 XP</td></tr>
+    <tr><td>090 → 100</td><td>Semente de Sussurro</td><td>1900</td><td>Whispers</td><td>Kingdom of Whispers</td><td>Cuidado com aggro</td><td>~1000+ XP</td></tr>
+
 </table>
 </div>
 
-<footer>
-    <div class="tag">✨ Criado por Azpirina ✨</div>
-</footer>
+<div class="footer">
+    <span>✨ Criado por Azpirina ✨</span>
+</div>
 
 </body>
 </html>
